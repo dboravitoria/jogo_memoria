@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ff97e1;
+    user-select: none;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(325deg, #03001e, #7303c0, #ec38bc, #fdeff9);
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 3px #03001e;
+}
+h2{
+    font-size: 3em;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 3px 3px 3px #03001e;
+}
+.reset{
+    padding: 14px 20px;
+    width: 100%;
+    color: #03001e;
+    background-color: #fdeff9;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 5px 5px 3px #03001e;
+}
+.reset:focus{
+    background-color: #03001e;
+    color: #fc1e8a;
+
+}
+.game{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdeff9;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    border-radius:12px ;
+    box-shadow: 5px 5px 3px #03001e;
+}
+.item::after{
+    content: "";
+    border-radius: 12px;
+    position: absolute;
+    inset: 0;
+    background: #03001e;
+    transition: 0.5s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: #ff97e1;
+  font-size: 1.5em;
+  padding: 25px;
+  border-radius: 8px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 10px 5px 5px #03001e;
+}
+
+#fechar {
+  float: right;
+  cursor: pointer;
+}

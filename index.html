@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <title>Jogo da memória</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>JOGO DA MEMÓRIA</h2>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload()">RESET GAME</button>
+    </div>
+    <div id="meuModal" class="modal">
+  <div class="modal-conteudo">
+        <span id="fechar">&times;</span>
+        <p>Parabéns👏🏼 Você venceu o jogo da memória dos Corações🫶🏼!</p>
+    </div>
+    </div>
+
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+</html>
